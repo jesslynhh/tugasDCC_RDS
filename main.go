@@ -52,7 +52,8 @@ var Globaldb *sql.DB
 
 func main() {
 	var err error
-	Globaldb, err = sql.Open("mysql", "root:purnama9@tcp(localhost:3306)/piplupShop")
+	// Globaldb, err = sql.Open("mysql", "root:purnama9@tcp(localhost:3306)/piplupShop")
+	Globaldb, err = sql.Open("mysql", "root:purnama9@tcp(database-1.cnq6mumoop1p.us-east-1.rds.amazonaws.com:3306)/piplupShop")
 	if err != nil {
 		log.Fatal("Fail to connect to database 1")
 	}
