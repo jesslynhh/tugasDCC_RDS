@@ -18,7 +18,7 @@ func homePage(w http.ResponseWriter, r *http.Request) {
 func page2(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "Homepage Endpoint 2")
 
-	query := "SELECT * FROM product WHERE productId = 001"
+	query := "SELECT * FROM product WHERE productId = 1"
 	result, err := Globaldb.Query(query)
 	if err != nil {
 		log.Fatal("Error Query!")
